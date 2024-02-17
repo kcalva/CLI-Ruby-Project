@@ -1,5 +1,7 @@
-# ruby-cli-template
+# Recipe Manager Cli
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
+Ruby CLI (command line interface) project simulating a list of recipes being added,deleted, updated or viewed.
 
-- Ruby version: `3.2.1`
+## Operation
+
+Run ```ruby recipes.rb``` in the terminal.
