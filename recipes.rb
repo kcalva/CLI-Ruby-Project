@@ -2,28 +2,32 @@
 class Recipes
   attr_accessor :name, :ingredient, :instructions, :category
 
-  def initialize(name,ingredient,instructions,category)
+  def initialize(name,ingredient,instructions,category,recipes)
 	  @name = name
 	  @ingredient = ingredient
 	  @instructions = instructions
 		@category = category
+		@recipes = recipes
   end
 
   # Methods for adding, viewing, updating, or deleting recipes
 	def add_recipe
 		puts "Enter the name of the recipe: "
-		@name = gets.chomp
+		name = gets.chomp
 		
 		puts "Enter the ingredients (separated by commas): "
-		@ingredient = gets.chomp.split(",")
+		ingredient = gets.chomp.split(",")
 
 		puts "Enter the instructions: "
-		@instructions = gets.chomp
+		instructions = gets.chomp
 
 		puts "Enter the category: "
-		@category = gets.chomp
+		category = gets.chomp
 
-		Recipes.new(@name,@ingredient,@instructions,@category)
+		new_recipe = Recipes.new(name,ingredient,instructions,category,@recipes)
+		@recipes << new_recipe
+
+		new_recipe
 
 	end
 	
