@@ -108,7 +108,7 @@ loop do
 
 	case choice
 	when "1"
-		recipe = Recipes.new("","","","")
+		recipe = Recipes.new("","","","",[])
 		new_recipe = recipe.add_recipe
 		recipes << new_recipe
 
@@ -119,7 +119,7 @@ loop do
 			puts "Enter the name of the recipe you want to view: "
 			recipe_name = gets.chomp
 
-			recipes_obj = Recipes.new("","","","")
+			recipes_obj = Recipes.new("","","","",[])
 			recipes_obj.view_recipe(recipe_name,recipes)
 		end
 	when "3"
@@ -129,7 +129,7 @@ loop do
 			puts "Enter the name of the recipe you want to update: "
 			recipe_name = gets.chomp
 
-			recipes_obj = Recipes.new("","","","")
+			recipes_obj = Recipes.new("","","","",[])
 			recipes_obj.update_recipe(recipe_name,recipes)
 		end
 	when "4"
@@ -139,7 +139,7 @@ loop do
 			puts "Enter the name of recipe you want to delete: "
 			recipe_name = gets.chomp
 
-			recipes_obj = Recipes.new("","","","")
+			recipes_obj = Recipes.new("","","","",[])
 			recipes_obj.delete_recipe(recipe_name,recipes)
 		end
 	when "exit"
